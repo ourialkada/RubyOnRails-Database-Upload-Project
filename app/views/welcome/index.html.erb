@@ -1,0 +1,120 @@
+<!--
+// user web server for chrome-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script type="text/javascript" src="/assets/functions.js"></script>
+  <script src = "https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js" ></script>
+  <script src = "https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+  <script src = "https://www.gstatic.com/firebasejs/5.7.0/firebase-storage.js" ></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <link rel="stylesheet" href="cssFile.css">
+
+<!--<script>
+  var firebaseConfig = {
+    apiKey: "YOUR API KEY",
+    authDomain: "YOUR AUTH DOMAIN",
+    databaseURL: "YOUR DATABASE URL",
+    projectId: "YOUR PROJECT ID",
+    storageBucket: "YOUR STORAGE BUCKET",
+    messagingSenderId: "YOUR MESSAGING ID",
+    appId: "YOUR APP ID"
+  };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>-->
+<script>
+var firebaseConfig = {
+   apiKey: "AIzaSyAyOkaLq7gmAWbc72Cx4hhx8oKQgPQdH4I",
+   authDomain: "jsos-apparel.firebaseapp.com",
+   databaseURL: "https://jsos-apparel.firebaseio.com",
+   projectId: "jsos-apparel",
+   storageBucket: "jsos-apparel.appspot.com",
+   messagingSenderId: "1039147682085",
+   appId: "1:1039147682085:web:60ccc32eb27018cd"
+ };
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+</script>
+
+</head>
+
+<body onload="hide();">
+  <div id="header">
+      <h1 id="headerTitle">Database Upload Project</h1>
+  </div>
+  <div class="fullWidth" style="justify-content:center;align-items:center;" id = "table2">
+  <table>
+    <tr>
+      <td>Email:</td>
+      <td><input type="text" id="email"></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" id="password" ></td>
+    </tr>
+    <tr >
+      <td colspan="2">
+      <button type="button" id="logInButton" onclick="logInClick();">LogIn</button>
+      </td>
+    </tr>
+
+    </table>
+    </div>
+  <div class="fullWidth" style="justify-content:center;align-items:center;">
+
+      <div style="border-color: black;border-width: 1px" id = "table">
+        <table >
+          <tr>
+            <td>Name:</td>
+            <td><input type="text" id="name"></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td><input type="text" id="description"></td>
+          </tr>
+          <tr>
+            <td>Price:</td>
+            <td><input type="text" id="price"></td>
+          </tr>
+          <tr>
+            <td>Quantity:</td>
+            <td><input type="text" id="quantity"></td>
+          </tr>
+          <tr>
+            <td>Favorite:</td>
+            <td><input type="text" id="favorite"></td>
+          </tr>
+          <tr>
+            <td>Type:</td>
+            <td><input type="radio" name="gender" id="male"> Male
+            <input type="radio" name="gender" id="female"> Female
+            <input type="radio" name="gender" id="kids"> Kids</td>
+            <tr>
+              <td>Click submit then pick picture</td>
+              <td colspan="2"><Button id="button" onclick="sendData();">Submit</button></td>
+            </tr>
+          <tr>
+            <td>Image:</td>
+            <td><input id="images" type="file" /></td>
+          </tr>
+        </table>
+
+
+      </div>
+
+
+
+
+  </div>
+
+
+
+
+  <div class="footer">
+    <p>  © Copyright by Ouri Alkada ©</p>
+  </div>
+</body>
+
+</html>
